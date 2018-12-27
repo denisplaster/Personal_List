@@ -19,6 +19,21 @@ const PersonList = () => {
       img: 25,
       name: "anne",
       job: "artist"
+    },
+    {
+      img: 28,
+      name: "beth",
+      job: "sculpter"
+    },
+    {
+      img: 29,
+      name: "nelly",
+      job: "lawyer"
+    },
+    {
+      img: 37,
+      name: "kira",
+      job: "teacher"
     }
   ];
 
@@ -29,8 +44,10 @@ const PersonList = () => {
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos
         error minus magnam molestiae animi qui?
       </Person>
-      ;
-      <Person person={people[2]} />;
+      <Person person={people[2]} />
+      <Person person={people[3]} />
+      <Person person={people[4]} />
+      <Person person={people[5]} />
     </section>
   );
 };
@@ -41,7 +58,7 @@ const Person = props => {
   const url = `https://randomuser.me/api/portraits/thumb/women/${img}.jpg`;
 
   return (
-    <div className="person">
+    <div wrap className="person">
       <img src={url} alt="" />
       <div />
       <h4>{name}</h4>
